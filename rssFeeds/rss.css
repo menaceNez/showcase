@@ -1,0 +1,174 @@
+/* 
+8% Header 
+8%RSS Feed title and selector 
+84% body
+*/
+html {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+#header {
+    display: flex;
+    height: 8%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+#container {
+    margin-top: 10px;
+    width: 100%;
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+#div_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 40px 10px 40px;
+}
+
+#load_header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: black;
+    height: 8%;
+    width: 100%;
+    text-indent: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+#load_button {
+    height: 100%;
+    max-height: 28px;
+    border: 2px solid rgba(0, 0, 0, 1);
+    margin-left: 8px;
+    border-radius: 4px;
+}
+
+#load_button:hover {
+    background-color: rgb(220,220,220);
+}
+
+
+#select-names {
+    margin-left: 8px;
+}
+
+#email_button {
+    margin-right: 10px;
+    border: 5px solid rgba(90, 0, 0, .8);
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 60%;
+}
+
+#email_button:hover {
+    background-color: rgb(220,220,220);
+}
+
+.list_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px solid black;
+    background-color: yellow;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#content-feed {
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    width: 90%;
+    display: flex; 
+    margin-bottom: 24px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0; /* In ul elements there is left padding. I assume this is for the bullet point? */
+    margin-top: 10px;
+}
+
+#rss-feeds {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subdiv_title {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+.subdiv_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-indent: 10px;
+}
+.subdiv_date { 
+    height: 100%;
+    width: 100%;
+    background-color: rgb(90,90,255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    text-indent: 10px;
+}
+.subdiv_body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#header_text{
+    margin: 10px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+* {
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

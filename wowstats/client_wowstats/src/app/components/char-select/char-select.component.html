@@ -1,0 +1,41 @@
+<div class="charSelect">
+  <section class="charContainer">
+    <div [hidden]="this.chars.length === 0" class="charList">
+      <div *ngFor="let char of paginatedChars()">
+        <section class="listItem" (click)="handleCharSelectClick(char)">
+          <div class="charname">{{ char.name }}</div>
+          <div class="charclass">{{ char.class }}</div>
+        </section>
+      </div>
+
+    </div>
+    <div class="pagination">
+      <button class="btn pag" [disabled]="currentPage === 1" (click)="prevPage()">Previous</button>
+      <button class="btn pag" (click)="nextPage()" [disabled]="currentPage === pages">Next</button>
+
+      <p> {{ currentPage }} <strong>:</strong> {{ pages }} </p>
+    </div>
+
+
+  </section>
+  <form [formGroup]="createCharForm" (ngSubmit)="onSubmit()">
+    <section class="nameField">
+      <label for="charName">Name:</label>
+      <input id="charName" type="text" formControlName="charName" placeholder="Enter Character Name">
+    </section>
+    <section class="classField mgnb">
+      <label for="charClass">Class:</label>
+      <select id="charClass" formControlName="className">
+        <option value="Mage">Mage</option>
+        <option value="Warrior" selected>Warrior</option>
+      </select>
+    </section>
+    <small *ngIf="createCharForm.get('charName')?.hasError('minlength')">Minimum length of 4 characters
+      required</small>
+    <div>
+      <button class="btn mgnr" type="submit" [disabled]="createCharForm.invalid">Create</button>
+      <button class="btn" type="button" (click)="deleteCharacters()">Clearlist</button>
+    </div>
+  </form>
+
+</div>

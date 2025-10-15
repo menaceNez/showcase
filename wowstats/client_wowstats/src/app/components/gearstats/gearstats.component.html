@@ -1,0 +1,269 @@
+<div class="posInfo">
+  <div class="charInfo">
+    <button class="btn mgnr" (click)="navCharSelect()">Back</button>
+    <section class="mgnr">Character:</section>
+    {{ chara.name }} {{ chara.class }}
+  </div>
+</div>
+<!-- <button (click)="printState()">Sup</button> -->
+<div class="sideby">
+  <div class="gearpiece-stats">
+    <section class="gearpiece-image gearslot">
+      <img src="{{ this.modalGearpiece?.mediaLink }}" />
+    </section>
+
+    <section class="statpiece">name: {{ this.modalGearpiece?.name }}</section>
+    <section
+      *ngIf="this.modalGearpiece?.stats?.dps !== 0"
+      class="statpiece mgnt"
+    >
+      Dps: {{ this.modalGearpiece?.stats?.dps | number : "1.2-2" }}
+    </section>
+    <section
+      *ngIf="this.modalGearpiece?.stats?.armor !== 0"
+      class="statpiece mgnt"
+    >
+      Armor: {{ this.modalGearpiece?.stats?.armor }}
+    </section>
+    <section class="statpiece">
+      Stamina: {{ this.modalGearpiece?.stats?.stamina }}
+    </section>
+    <section class="statpiece">
+      Strength: {{ this.modalGearpiece?.stats?.strength }}
+    </section>
+    <section class="statpiece">
+      Intellect: {{ this.modalGearpiece?.stats?.intellect }}
+    </section>
+    <section class="statpiece">
+      Agility: {{ this.modalGearpiece?.stats?.agility }}
+    </section>
+    <section class="statpiece">
+      Spirit: {{ this.modalGearpiece?.stats?.spirit }}
+    </section>
+    <!-- <div *ngFor="let stat of this.modalGearpiece?.stats| keyvalue">
+    <section *ngIf="stat">{{ stat.value }}</section>
+  </div> -->
+  </div>
+
+  <div class="characterTemplate">
+    <div #gearslot class="gearslot mgn mgnt" id="head" [ngStyle]="">
+      <img
+        [src]="charTemplate.head?.mediaLink"
+        ((mouseleave))="hideGearpiece()"
+        (mouseenter)="showGearpiece(this.charTemplate.head!)"
+      />Head
+    </div>
+    <section class="rowgear">
+      <div #gearslot class="gearslot mgn" id="back">
+        <img
+          [src]="charTemplate.back?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.back!)"
+        /><span>Back</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="neck">
+        <img
+          [src]="charTemplate.neck?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.neck!)"
+        /><span>Neck</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="shoulder">
+        <img
+          [src]="charTemplate.shoulders?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.shoulders!)"
+        /><span>Shoulders</span>
+      </div>
+    </section>
+    <section class="rowgear">
+      <div #gearslot class="gearslot mgn" id="one-hand">
+        <img
+          [src]="charTemplate.onehand?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.onehand!)"
+        /><span>One-Hand</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="chest">
+        <img
+          [src]="charTemplate.chest?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.chest!)"
+        /><span>Chest</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="offhand">
+        <img
+          [src]="charTemplate.offhand?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.offhand!)"
+        /><span>Off-Hand</span>
+      </div>
+    </section>
+    <section class="rowgear">
+      <div #gearslot class="gearslot mgn" id="wrist">
+        <img
+          [src]="charTemplate.wrist?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.wrist!)"
+        /><span class="label">Wrist</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="waist">
+        <img
+          [src]="charTemplate.waist?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.waist!)"
+        /><span>Waist</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="hands">
+        <img
+          [src]="charTemplate.hands?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.hands!)"
+        /><span>Hands</span>
+      </div>
+    </section>
+    <section class="rowgear">
+      <div #gearslot class="gearslot mgn" id="trinket">
+        <img
+          [src]="charTemplate.trinket?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.trinket!)"
+        /><span>Trinket</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="legs">
+        <img
+          [src]="charTemplate.legs?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.legs!)"
+        /><span>Legs</span>
+      </div>
+      <div #gearslot class="gearslot mgn" id="finger">
+        <img
+          [src]="charTemplate.finger?.mediaLink"
+          ((mouseleave))="hideGearpiece()"
+          (mouseenter)="showGearpiece(this.charTemplate.finger!)"
+        /><span>Finger</span>
+      </div>
+    </section>
+    <div #gearslot class="gearslot mgn" id="feet">
+      <img
+        [src]="charTemplate.feet?.mediaLink"
+        ((mouseleave))="hideGearpiece()"
+        (mouseenter)="showGearpiece(this.charTemplate.feet!)"
+      /><span>Feet</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <section class="statpiece">
+      Dps: {{ statsObj.dps | number : "1.2-2" }}
+    </section>
+    <section class="statpiece">Armor: {{ statsObj.armor }}</section>
+    <section class="statpiece">Stamina: {{ statsObj.stamina }}</section>
+    <section class="statpiece">Strength: {{ statsObj.strength }}</section>
+    <section class="statpiece">Intellect: {{ statsObj.intellect }}</section>
+    <section class="statpiece">Agility: {{ statsObj.agility }}</section>
+    <section class="statpiece">Spirit: {{ statsObj.spirit }}</section>
+    <!-- <section class="statpiece"> (Intellect Bonus) Spell Power: {{ addedStats.spellPower }}</section> -->
+    <section class="statpiece">
+      (Strength Bonus) Attack Power: {{ addedStats.attackPower }}
+    </section>
+    <section class="statpiece">
+      (Stamina Bonus) Added Health: {{ addedStats.addedHealth }}
+    </section>
+    <section class="statpiece">
+      (Spirit Bonus) Health Regen:
+      {{ addedStats.healthRegen | number : "1.2-2" }}
+    </section>
+    <section *ngIf="chara.class === 'mage'" class="statpiece">
+      (Spirit Bonus) Mana Regen: {{ addedStats.manaRegen | number : "1.2-2" }}
+    </section>
+    <section *ngIf="chara.class === 'mage'" class="statpiece">
+      (Intellect Bonus) Added Mana: {{ addedStats.addedMana }}
+    </section>
+    <section *ngIf="chara.class === 'mage'" class="statpiece">
+      (Intellect Bonus) Spell Crit:
+      {{ addedStats.spellCrit | number : "1.2-2" }}
+    </section>
+    <section class="statpiece">
+      (Agility Bonus) Crit Chance:
+      {{ addedStats.critChance | number : "1.2-2" }}%
+    </section>
+    <section class="statpiece">
+      (Agility Bonus) Dodge Chance: {{ addedStats.dodge | number : "1.2-2" }}%
+    </section>
+  </div>
+</div>
+
+<div class="searchContainer">
+  <div class="loading" [hidden]="isHidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+      <path
+        fill="none"
+        stroke="#C44FB3"
+        stroke-width="22"
+        stroke-linecap="round"
+        stroke-dasharray="300 385"
+        stroke-dashoffset="0"
+        d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          calcMode="spline"
+          dur="5"
+          values="685;-685"
+          keySplines="0 0 1 1"
+          repeatCount="indefinite"
+        ></animate>
+      </path>
+    </svg>
+  </div>
+  <section class="searchForm">
+    <div class="searchField">
+      <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <label for="gearSearchField">Search:</label>
+        <input
+          id="gearSearchField"
+          type="text"
+          formControlName="gearSearchField"
+        />
+      </form>
+    </div>
+    <div class="gearlist mgnt mgn">
+      <div *ngFor="let gearpiece of paginatedPieces()">
+        <div class="gearlistContent" (click)="handleGearlist(gearpiece)">
+          <img
+            class="gearImg"
+            [src]="gearpiece.mediaLink"
+            style="width: 23px"
+          />
+          <section class="itmName mgnr">{{ gearpiece.name }}</section>
+          <section class="pieceName mgnr">
+            {{ gearpiece.invintory_type }}
+          </section>
+          <section class="pieceName mgnr">{{ gearpiece.quality }}</section>
+          <section class="pieceName mgnr">
+            {{ gearpiece.subclass_name }}
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <button
+        class="btn mgnr"
+        [disabled]="currentPage === 1"
+        (click)="prevPage()"
+      >
+        Previous
+      </button>
+      <button
+        class="btn mgnr"
+        (click)="nextPage()"
+        [disabled]="pages === 0 || currentPage === pages"
+      >
+        Next
+      </button>
+      <small> {{ pages }} <strong>:</strong> {{ currentPage }} </small>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,12 @@
+<header class="header">
+  <p class="headertxt">WoW Stats</p>
+  <button id="logout" class="btn" *ngIf="authService.isLoggedIn() && user !== '' " (click)="logout()"> {{ user }} </button>
+</header>
+
+<main class="main-container">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- <div clas="secondary-comtainer"> 
+  <router-outlet name="smells"></router-outlet>
+</div> -->

@@ -1,0 +1,25 @@
+<div class="big-wowstats">WoW Stats</div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="inputfields">
+    <label for="username">Username</label>
+    <input id="username" formControlName="username" type="text" />
+  </div>
+
+  <div class="inputfields">
+    <label for="password">Password</label>
+    <input id="password" formControlName="password" type="password" />
+  </div>
+  <button class="btn" type="submit" [disabled]="loginForm.invalid">Login</button>
+  <div *ngIf="errormsg">
+    Invalid credentials!
+  </div>
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+      <small *ngIf="loginForm.get('password')?.hasError('required')">Password is required</small>
+      <small *ngIf="loginForm.get('password')?.hasError('minlength')">Password length must be greater than 3</small>
+    </div>
+    <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+      <!-- get the username input field -->
+      <small *ngIf="loginForm.get('username')?.hasError('required')">Username is required</small>
+      <small *ngIf="loginForm.get('username')?.hasError('minlength')">Username must be at least 4 characters</small>
+    </div>
+</form>

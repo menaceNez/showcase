@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html id="htm">
+
+<head>
+  <title>Carding</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/frontend.js"></script>
+</head>
+
+<body>
+  <svg id="loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <circle fill="#2EC378" stroke="#2EC378" stroke-width="15" r="15" cx="40" cy="65">
+      <animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1"
+        repeatCount="indefinite" begin="-.4"></animate>
+    </circle>
+    <circle fill="#2EC378" stroke="#2EC378" stroke-width="15" r="15" cx="100" cy="65">
+      <animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1"
+        repeatCount="indefinite" begin="-.2"></animate>
+    </circle>
+    <circle fill="#2EC378" stroke="#2EC378" stroke-width="15" r="15" cx="160" cy="65">
+      <animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1"
+        repeatCount="indefinite" begin="0"></animate>
+    </circle>
+  </svg>
+  <!-- Login display -->
+  <div id="root-container">
+    <div id="root-header">
+      Cardling
+      <button onclick="doLogout()" id="logout-button" class="btn"></button>
+    </div>
+    <div id="root-body">
+      <!-- input -->
+      <div id="root-input">
+        <input type="text" placeholder="username" id="root-username" class="input">
+        <input type="password" placeholder="password" id="root-password" class="input">
+        <section id="login-info">
+          <button id="login-button" class="btn" onclick="getLogin()">Sign in</button>
+          <p id="login-errormsg">Invalid credentials try again</p>
+        </section>
+      </div>
+      <!-- Carding -->
+      <div id="content-container">
+        <div id="content-wrap">
+          <div id="input-wrapper">
+            <div>
+              <input id="search-field" placeholder="Find Cards">
+              <button id="search-btn" class="btn" onclick="fetchCardlist()">Search</button>
+            </div>
+            <div>
+              <input id="rating-field" type="number" placeholder="Rate Cards" min="0" max="5">
+              <button class="btn" id="rating-button" onclick="rateCard()">Rate</button>
+            </div>
+          </div>
+          <div id="root-cards">
+            <ul id="root-ul"></ul>
+            <img id="card-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

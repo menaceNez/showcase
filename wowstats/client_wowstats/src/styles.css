@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(176, 176, 176);
+}
+
+.btn {
+  background-color: rgb(34, 34, 34);
+  border: 0;
+  border-radius: 6px;
+  width: 64px;
+  height: 32px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(57, 57, 57);
+}
+
+input {
+  background-color: rgb(167, 167, 167);
+  border-radius: 8px;
+  border: rgb(50,50,50) ridge 4px;
+}
+
+label {
+  margin-right: 4px;
+  font-weight: bolder;
+}

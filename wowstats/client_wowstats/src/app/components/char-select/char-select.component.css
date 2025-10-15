@@ -1,0 +1,93 @@
+.charSelect {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 512px;
+  margin-left: 4px;
+}
+
+.charList {
+  background-color: rgb(129, 129, 129);
+  height: auto;
+  width: 512px;
+  text-align: center;
+  border: rgb(50,50,50) ridge 4px;
+  border-radius: 8px;
+}
+
+.listItem {
+  margin: 2px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 32px;
+  align-items: center;
+}
+
+.mgnr {
+  margin-right: 4px;
+}
+
+.mgnb {
+  margin-bottom: 84px;
+}
+
+p {
+  margin: 0;
+  align-items: flex-end;
+}
+
+.listItem:hover {
+  background-color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-top:8px;
+  width: 512px;
+}
+
+.charContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction:column;
+}
+.pag {
+  margin-right: 4px;
+}
+
+.charname {
+  margin-left: 4px;
+}
+.charclass {
+  margin-right: 4px;
+}
+.classField{
+  margin-top: 4px;
+}
+
+.nameField {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+select {
+  background-color: rgb(129, 129, 129);
+  border-radius: 6px;
+}
+select:hover {
+  opacity: 80%;
+}

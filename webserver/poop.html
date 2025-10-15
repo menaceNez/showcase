@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool HTML Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+        .cool-button {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff4757;
+            border: none;
+            border-radius: 25px;
+            cursor: crosshair;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cool-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cool HTML Page!</h1>
+    </header>
+
+    <main>
+        <p>Explore the awesomeness of this simple, yet stylish webpage.</p>
+        <button class="cool-button" onclick="alert('Button Clicked!')">Click Me!</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cool HTML Creations</p>
+    </footer>
+</body>
+</html>

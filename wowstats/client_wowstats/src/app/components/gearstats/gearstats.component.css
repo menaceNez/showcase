@@ -1,0 +1,158 @@
+
+.gearlist {
+  width: 862px;
+  min-height: 230px;
+  background-color: rgb(120,120,120);
+  border: rgb(50,50,50) ridge 4px;
+  display:flex;
+  flex-direction:column;
+  padding: 4px;
+}
+
+.gearlistContent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.gearlistContent:hover {
+  opacity: 80%;
+  background-color: rgb(110,110,110);
+}
+
+.gearpiece-stats {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: rgb(120,120,120);
+  border:
+  rgb(50,50,50) ridge 4px;
+  width: 128px;
+}
+
+.posInfo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section {
+margin-bottom: 4px;
+}
+
+.charInfo {
+  background-color: rgb(120,120,120);
+  border: rgb(50,50,50) ridge 4px;
+  height: 64px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px 0 6px;
+  margin: 16px 16px;
+}
+
+.gearslot {
+  background-color: rgb(0, 0, 0);
+  border: greenyellow ridge 2px;
+  width:56px;
+  height:56px;
+  color:red;
+  font-size: 10px;
+  display: flex;
+  align-items:flex-end;
+  padding: 0 0 2px 2px;
+  position: relative;
+}
+
+.gearslot span {
+  position:absolute;
+  z-index: 1;
+}
+
+.gearslot img {
+  position: relative;
+  z-index: 2;
+}
+
+.loading {
+  margin-top: 80px;
+}
+
+.sideby {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.characterTemplate {
+  display: flex;
+  flex-direction: column;
+  border: rgb(50,50,50) ridge 4px;
+  background-color: rgb(120,120,120);
+  height: 512px;
+  width: 256px;
+  justify-content: center;
+  align-items:center;
+}
+
+.stats {
+  border: rgb(50,50,50) ridge 4px;
+  background-color: rgb(120,120,120);
+  width:280px;
+}
+
+.gearpiece-image {
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.statpiece {
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.rowgear {
+  display: flex;
+  justify-content: space-around;
+  width:100%
+}
+
+.searchContainer {
+  display:flex;
+  justify-content: center;
+  margin-top:16px;
+}
+
+.pieceName {
+  width: 120px;
+}
+.itmName {
+  width: 250px;
+}
+.mgnl {
+  margin-left: 4px;
+}
+
+.mgnr {
+  margin-right: 8px;
+}
+
+.mgn {
+  margin-bottom: 4px;
+}
+
+.mgnt {
+  margin-top: 4px;
+}
+
+.loading {
+  position: absolute;
+  height: 64px;
+  width: 128px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
