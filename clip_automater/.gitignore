@@ -1,0 +1,9 @@
+.env.local
+
+clips/
+
+videos.txt
+
+*.mp4
+
+google_twclipsgs_secretclientid.json
